@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Sign in to your Muslim Hands College account.">
+  <title>Sign in | Muslim Hands College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="auth-particles" data-particles aria-hidden="true"></div>
+  <main class="auth-shell">
+    <a class="brand" href="index.html" aria-label="Muslim Hands College home">
+      <img src="images/Musli-hand-imag.png" alt="" class="brand-mark">
+      <span><strong>Muslim Hands</strong><small>COLLEGE OF EXCELLENCE</small></span>
+    </a>
+
+    <section class="auth-card" aria-labelledby="page-title">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to website</a>
+      <p class="eyebrow">Welcome back</p>
+      <h1 id="page-title">Sign in to your account</h1>
+      <p class="intro">Choose your account type, then enter your credentials.</p>
+
+      <div class="signed-in" data-session-panel hidden>
+        <p data-session-message></p>
+        <button class="button button-secondary" type="button" data-logout>Sign out</button>
+      </div>
+
+      <form class="auth-form" data-auth-form data-endpoint="/api/auth/login" novalidate>
+        <fieldset class="role-picker">
+          <legend>Account type</legend>
+          <div class="role-options">
+            <label><input type="radio" name="role" value="student" checked><span>Student</span></label>
+            <label><input type="radio" name="role" value="teacher"><span>Teacher</span></label>
+            <label><input type="radio" name="role" value="admin"><span>Admin</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field-label" for="login-identity">Username or email</label>
+        <input class="text-field" id="login-identity" name="identity" type="text" autocomplete="username" required maxlength="254" placeholder="Enter your username or email">
+
+        <div class="label-row">
+          <label class="field-label" for="login-password">Password</label>
+        </div>
+        <input class="text-field" id="login-password" name="password" type="password" autocomplete="current-password" required maxlength="128" placeholder="Enter your password">
+
+        <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+        <button class="button button-primary" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+
+      <p class="switch-link">New to the college? <a href="signup.html" data-auth-navigation>Create a student account</a></p>
+      <p class="account-note">Teacher and administrator accounts are created by the college. Contact your college administrator if you need access.</p>
+    </section>
+
+    <p class="page-footer">Learn with purpose. Lead with confidence.</p>
+  </main>
+  <script src="auth.js" defer></script>
+</body>
+</html>

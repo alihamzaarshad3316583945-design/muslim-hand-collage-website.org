@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Create a student account for Muslim Hands College.">
+  <title>Create an account | Muslim Hands College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="auth-particles" data-particles aria-hidden="true"></div>
+
+  <main class="auth-shell">
+    <a class="brand" href="index.html" aria-label="Muslim Hands College home">
+      <img src="images/Musli-hand-imag.png" alt="" class="brand-mark">
+      <span><strong>Muslim Hands</strong><small>COLLEGE OF EXCELLENCE</small></span>
+    </a>
+
+    <section class="auth-card" aria-labelledby="page-title">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to website</a>
+      <p class="eyebrow">Start your journey</p>
+      <h1 id="page-title">Create a student account</h1>
+      <p class="intro">Your next chapter begins here. Share your details to get started.</p>
+
+      <div class="signed-in" data-session-panel hidden>
+        <p data-session-message></p>
+        <button class="button button-secondary" type="button" data-logout>Sign out</button>
+      </div>
+
+      <form class="auth-form signup-form" data-auth-form data-endpoint="/api/auth/signup" novalidate>
+        <div class="field">
+          <label class="field-label" for="signup-name">Full name</label>
+          <input class="text-field" id="signup-name" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="100" placeholder="Your full name">
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="signup-email">Email address</label>
+          <input class="text-field" id="signup-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="signup-roll">Student roll number</label>
+          <input class="text-field" id="signup-roll" name="studentNumber" type="text" autocomplete="off" required minlength="1" maxlength="40" placeholder="Your college roll number">
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="signup-class">Class / program</label>
+          <select class="text-field" id="signup-class" name="classId" required data-class-options>
+            <option value="">Loading available classes…</option>
+          </select>
+          <p class="field-hint" data-class-hint aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="signup-password">Password</label>
+          <div class="password-control">
+            <input class="text-field" id="signup-password" name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="128" aria-describedby="password-hint" placeholder="At least 10 characters">
+            <button class="password-toggle" type="button" data-password-toggle="signup-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="signup-confirm-password">Confirm password</label>
+          <div class="password-control">
+            <input class="text-field" id="signup-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required minlength="10" maxlength="128" placeholder="Enter your password again">
+            <button class="password-toggle" type="button" data-password-toggle="signup-confirm-password" aria-label="Show confirm password" aria-pressed="false">Show</button>
+          </div>
+        </div>
+
+        <p class="field-hint password-hint" id="password-hint">Use at least 10 characters. Choose a password you do not use elsewhere.</p>
+
+        <label class="terms-check">
+          <input type="checkbox" name="terms" value="true" required>
+          <span>I agree to the Terms &amp; Conditions and confirm these details are accurate.</span>
+        </label>
+
+        <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+        <button class="button button-primary" type="submit">Create account <span aria-hidden="true">→</span></button>
+      </form>
+
+      <p class="switch-link">Already have an account? <a href="login.html" data-auth-navigation>Login</a></p>
+      <p class="account-note">Public registration is for students. Teacher and administrator accounts are provisioned by the college.</p>
+    </section>
+
+    <p class="page-footer">Learn with purpose. Lead with confidence.</p>
+  </main>
+  <script src="auth.js" defer></script>
+</body>
+</html>

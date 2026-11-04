@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Meet Ali Kashmiri, UX/UI and web designer from Kashmir.">
+  <title>Ali Kashmiri | Personal Profile</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="profile-page">
+  <div class="topbar"><div class="topbar-inner"><span>Muslim Hands College of Excellence</span><span>Learn • Lead • Serve</span></div></div>
+  <header class="header">
+    <div class="navwrap">
+      <a class="brand" href="index.html"><img src="images/Musli-hand-imag.png" alt="" class="brand-logo"><span class="brand-text">MUSLIM HANDS <small>COLLEGE OF EXCELLENCE</small></span></a>
+      <button class="menu-btn" aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
+      <nav class="navlinks">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="admissions.html">Admissions</a><a href="programs.html">Programs</a><a href="courses.html">Courses</a><a href="faculty.html">Faculty</a><a href="results.html">Results</a><a href="gallery.html">Gallery</a><a href="news.html">News &amp; Events</a><a href="student-life.html">Student Life</a><a href="facilities.html">Facilities</a><a href="faq.html">FAQs</a><a href="downloads.html">Downloads</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="profile-banner">
+      <div class="profile-banner-content">
+        <div class="profile-avatar" aria-label="Ali Kashmiri profile picture">
+          <span data-profile-initials>AK</span>
+          <img data-avatar-image alt="Ali Kashmiri" hidden>
+        </div>
+        <div class="profile-identity">
+          <p class="eyebrow">PERSONAL PROFILE</p>
+          <h1 data-profile-name>Ali Kashmiri</h1>
+          <p class="profile-full-name">Full name: <span data-full-name>Ali Hamza</span></p>
+          <p class="profile-profession" data-profession>UX/UI Designer &amp; Web Designer</p>
+          <div class="profile-meta"><span>⌖ <span data-location>Wazirabad, Pakistan</span></span><span>✦ <span data-background>From Kashmir</span></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="profile-page-content">
+      <div class="container">
+        <div class="profile-edit-bar">
+          <button class="btn" type="button" data-profile-edit hidden>Edit Profile</button>
+        </div>
+        <p class="profile-login-note" data-profile-login-note hidden>Only the signed-in profile owner can edit this information. <a class="text-link" href="login.html">Sign in</a></p>
+        <section class="profile-card profile-editor" data-profile-editor hidden aria-labelledby="profile-edit-title">
+          <h2 id="profile-edit-title">Edit profile</h2>
+          <form class="form" data-profile-form>
+            <div class="field"><label for="profile-full-name">Full name</label><input id="profile-full-name" name="fullName" required minlength="2" maxlength="100"></div>
+            <div class="field"><label for="profile-name">Profile name</label><input id="profile-name" name="profileName" required minlength="2" maxlength="100"></div>
+            <div class="field"><label for="profile-location">Location</label><input id="profile-location" name="location" required minlength="2" maxlength="120"></div>
+            <div class="field"><label for="profile-background">Background</label><input id="profile-background" name="background" required minlength="2" maxlength="120"></div>
+            <div class="field"><label for="profile-profession">Profession</label><input id="profile-profession" name="profession" required minlength="2" maxlength="160"></div>
+            <div class="field"><label for="profile-education">Education</label><input id="profile-education" name="education" required minlength="2" maxlength="240"></div>
+            <div class="field full"><label for="profile-college">College</label><input id="profile-college" name="college" required minlength="2" maxlength="160"></div>
+            <div class="field full"><label for="profile-bio">About me</label><textarea id="profile-bio" name="bio" maxlength="2000" rows="4"></textarea></div>
+            <div class="field full"><label for="profile-skills">Skills (separate with commas)</label><input id="profile-skills" name="skills" maxlength="1000" placeholder="Figma, UI/UX Design, Website Design"></div>
+            <div class="field full"><label for="profile-avatar-url">Profile picture HTTPS image URL</label><input id="profile-avatar-url" name="avatarUrl" type="url" maxlength="2048" placeholder="Leave blank to use initials"></div>
+            <div class="field"><label for="profile-tiktok">TikTok URL</label><input id="profile-tiktok" name="tiktokUrl" type="url" maxlength="2048"></div>
+            <div class="field"><label for="profile-website">Portfolio website</label><input id="profile-website" name="websiteUrl" type="url" maxlength="2048"></div>
+            <div class="field"><label for="profile-instagram">Instagram URL (optional)</label><input id="profile-instagram" name="instagramUrl" type="url" maxlength="2048"></div>
+            <div class="field"><label for="profile-facebook">Facebook URL (optional)</label><input id="profile-facebook" name="facebookUrl" type="url" maxlength="2048"></div>
+            <div class="field"><label for="profile-behance">Behance URL (optional)</label><input id="profile-behance" name="behanceUrl" type="url" maxlength="2048"></div>
+            <div class="field"><label for="profile-linkedin">LinkedIn URL (optional)</label><input id="profile-linkedin" name="linkedinUrl" type="url" maxlength="2048"></div>
+            <div class="profile-update-message" data-profile-message role="status" aria-live="polite"></div>
+            <div class="profile-form-actions"><button class="btn" type="submit">Save changes</button><button class="btn btn-quiet" type="button" data-profile-cancel>Cancel</button></div>
+          </form>
+        </section>
+        <div class="profile-grid">
+          <article class="profile-card">
+            <h2>About me</h2>
+            <p data-bio>I am a UX/UI and web designer with a science education and a focus on clear, thoughtful digital experiences.</p>
+            <div class="profile-facts">
+              <div class="profile-fact"><span>Education</span><strong data-education>Matriculation in Science Subjects</strong></div>
+              <div class="profile-fact"><span>College</span><strong data-college>Muslim Hands College of Excellence</strong></div>
+              <div class="profile-fact"><span>Based in</span><strong data-fact-location>Wazirabad, Pakistan</strong></div>
+              <div class="profile-fact"><span>Background</span><strong data-fact-background>From Kashmir</strong></div>
+            </div>
+          </article>
+          <article class="profile-card">
+            <h2>Skills</h2>
+            <div class="profile-skills" data-skills></div>
+          </article>
+          <article class="profile-card">
+            <h2>Connect</h2>
+            <p>Find me online or visit my portfolio.</p>
+            <div class="profile-links" data-profile-links></div>
+          </article>
+          <article class="profile-card">
+            <h2>Contact information</h2>
+            <div class="profile-facts">
+              <div class="profile-fact"><span>Location</span><strong data-contact-location>Wazirabad, Pakistan</strong></div>
+              <div class="profile-fact"><span>TikTok</span><strong data-tiktok-handle>@alikashmiri084</strong></div>
+            </div>
+            <p class="profile-login-note" data-profile-status role="status"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html"><img src="images/Musli-hand-imag.png" alt="" class="brand-logo"><span class="brand-text">MUSLIM HANDS <small>COLLEGE OF EXCELLENCE</small></span></a><p class="muted">Building knowledge, confidence, and character for a brighter future.</p></div><div><h3>Explore</h3><a href="admissions.html">Admissions</a><a href="programs.html">Programs</a><a href="results.html">Student Results</a><a href="news.html">News &amp; Events</a></div><div><h3>Connect</h3><a href="profile.html">Personal profile</a><a href="contact.html">Contact the college</a><a href="apply.html">Online admission inquiry</a></div></div><div class="copyright"><span>© <span data-year></span> Muslim Hands College of Excellence</span><span>Profile information shared by Ali Kashmiri</span></div></div></footer>
+  <script src="assets/script.js"></script>
+  <script src="profile.js" defer></script>
+</body>
+</html>

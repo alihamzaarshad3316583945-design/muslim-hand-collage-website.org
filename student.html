@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Your Muslim Hands College student portal.">
+  <title>Student portal | Muslim Hands College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="management.css">
+</head>
+<body>
+  <div class="portal">
+    <aside class="sidebar" id="sidebar">
+      <a class="portal-brand" href="index.html"><img src="images/Musli-hand-imag.png" alt=""><span><strong>Muslim Hands</strong><small>STUDENT PORTAL</small></span></a>
+      <div class="sidebar-label">MY COLLEGE</div>
+      <nav class="side-nav" aria-label="Student dashboard sections">
+        <button class="nav-item active" data-scroll="student-overview"><span>▦</span> My overview</button>
+        <button class="nav-item" data-scroll="student-attendance"><span>◷</span> Attendance</button>
+        <button class="nav-item" data-scroll="student-results"><span>✦</span> Exam results</button>
+        <button class="nav-item" data-scroll="student-assignments"><span>✎</span> Homework</button>
+        <button class="nav-item" data-scroll="student-fees"><span>◈</span> Fee status</button>
+        <button class="nav-item" data-scroll="student-timetable"><span>▤</span> Timetable</button>
+        <button class="nav-item" data-scroll="student-notices"><span>▧</span> Notices</button>
+      </nav>
+      <div class="sidebar-bottom"><a class="sidebar-home" href="index.html">← Back to website</a><div class="account-chip"><span class="avatar" data-avatar>ST</span><span class="account-copy"><strong data-name>Student</strong><small data-class>Student account</small></span></div><button class="logout-button" data-logout type="button">Sign out <span>↗</span></button></div>
+    </aside>
+    <main class="main-content">
+      <header class="mobile-header"><button type="button" class="mobile-menu" data-menu aria-label="Open navigation">☰</button><span>STUDENT PORTAL</span><span class="avatar small-avatar" data-avatar>ST</span></header>
+      <section id="student-overview" class="page-heading"><div><p class="eyebrow" data-college>STUDENT PORTAL</p><h1>Welcome, <span data-name>student</span></h1><p class="page-subtitle"><span data-student-number></span><span data-class-name></span></p></div><div class="heading-date" data-today></div></section>
+      <div class="toast" role="status" aria-live="polite" data-toast></div>
+      <div class="dashboard-view active">
+        <div class="stat-grid">
+          <article class="stat-card"><span>ATTENDANCE</span><strong data-attendance-rate>—</strong><small data-attendance-caption>Based on recorded school days</small><i>◷</i></article>
+          <article class="stat-card"><span>CLASSES ATTENDED</span><strong data-attendance-count>—</strong><small>Present and late records</small><i>▤</i></article>
+          <article class="stat-card"><span>FEE BALANCE</span><strong data-fee-balance>—</strong><small>Outstanding amount due</small><i>◈</i></article>
+          <article class="stat-card"><span>EXAM RESULTS</span><strong data-result-count>—</strong><small>Published subject results</small><i>✦</i></article>
+        </div>
+        <section id="student-attendance" class="panel"><div class="panel-heading"><div><h2>Attendance history</h2><p>Your recorded attendance. Late arrivals count as attended and are shown separately.</p></div></div><div class="table-wrap"><table><thead><tr><th>DATE</th><th>CLASS</th><th>STATUS</th></tr></thead><tbody data-attendance></tbody></table></div></section>
+        <section id="student-results" class="panel"><div class="panel-heading"><div><h2>Exam results</h2><p>Results released by the college.</p></div></div><div class="table-wrap"><table><thead><tr><th>EXAM</th><th>SUBJECT</th><th>SCORE</th><th>PERCENTAGE</th></tr></thead><tbody data-results></tbody></table></div></section>
+        <section id="student-assignments" class="panel"><div class="panel-heading"><div><h2>Homework &amp; assignments</h2><p>Instructions and due dates published for your class.</p></div></div><div class="notice-list" data-assignments><p class="empty-state">Your class assignments will appear here.</p></div></section>
+        <section id="student-fees" class="panel"><div class="panel-heading"><div><h2>Fee status</h2><p>Fee details and recorded balances. Contact the college office to pay.</p></div></div><div class="table-wrap"><table><thead><tr><th>DESCRIPTION</th><th>TOTAL</th><th>PAID</th><th>BALANCE</th><th>DUE DATE</th><th>STATUS</th></tr></thead><tbody data-fees></tbody></table></div></section>
+        <section id="student-timetable" class="panel"><div class="panel-heading"><div><h2>Weekly timetable</h2><p>Your assigned class schedule.</p></div></div><div class="table-wrap"><table><thead><tr><th>DAY</th><th>TIME</th><th>SUBJECT</th><th>ROOM</th></tr></thead><tbody data-timetable></tbody></table></div></section>
+        <section id="student-notices" class="panel"><div class="panel-heading"><div><h2>College notices</h2><p>Announcements for you and the college community.</p></div></div><div class="notice-list" data-notices></div></section>
+      </div>
+    </main>
+  </div>
+  <script src="student-portal.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Teacher attendance and class portal for Muslim Hands College.">
+  <title>Teacher portal | Muslim Hands College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="management.css">
+</head>
+<body>
+  <div class="portal">
+    <aside class="sidebar" id="sidebar">
+      <a class="portal-brand" href="index.html"><img src="images/Musli-hand-imag.png" alt=""><span><strong>Muslim Hands</strong><small>TEACHER PORTAL</small></span></a>
+      <div class="sidebar-label">MY CLASSES</div>
+      <nav class="side-nav" aria-label="Teacher dashboard sections">
+        <button class="nav-item active" data-scroll="teacher-attendance"><span>◷</span> Take attendance</button>
+        <button class="nav-item" data-scroll="teacher-notices"><span>▧</span> Notices</button>
+      </nav>
+      <div class="sidebar-bottom"><a class="sidebar-home" href="index.html">← Back to website</a><div class="account-chip"><span class="avatar" data-avatar>TC</span><span class="account-copy"><strong data-name>Teacher</strong><small>Teacher account</small></span></div><button class="logout-button" data-logout type="button">Sign out <span>↗</span></button></div>
+    </aside>
+    <main class="main-content">
+      <header class="mobile-header"><button type="button" class="mobile-menu" data-menu aria-label="Open navigation">☰</button><span>TEACHER PORTAL</span><span class="avatar small-avatar" data-avatar>TC</span></header>
+      <section id="teacher-attendance" class="page-heading"><div><p class="eyebrow">MUSLIM HANDS COLLEGE</p><h1>Welcome, <span data-name>teacher</span></h1><p class="page-subtitle">Take attendance for classes assigned to your account.</p></div><div class="heading-date" data-today></div></section>
+      <div class="toast" role="status" aria-live="polite" data-toast></div>
+      <div class="dashboard-view active">
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Daily class attendance</h2><p>Only classes assigned to your account are available here.</p></div></div>
+          <div class="toolbar"><label>Class<select data-class><option value="">Select an assigned class</option></select></label><label>Date<input type="date" data-date></label><label>Search student<input type="search" data-attendance-search maxlength="100" placeholder="Name or roll number"></label><button class="button button-secondary" type="button" data-load>Load class roster</button><button class="button button-quiet" type="button" data-export-attendance>Export CSV</button></div>
+          <form data-attendance-form><div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>STUDENT NUMBER</th><th>ATTENDANCE</th></tr></thead><tbody data-roster><tr><td colspan="3" class="empty-state">Choose a class and load the roster.</td></tr></tbody></table></div><button class="button button-primary table-submit" type="submit">Save attendance</button></form>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Class assignments</h2><p>Publish instructions and due dates for one of your assigned classes.</p></div></div>
+          <form class="form-grid" data-assignment-form>
+            <label>Class<select name="classId" required data-assignment-class><option value="">Select an assigned class</option></select></label>
+            <label>Assignment title<input name="title" required minlength="2" maxlength="140"></label>
+            <label>Due date<input name="dueDate" type="date" required></label>
+            <label class="wide-field">Instructions<textarea name="description" required minlength="2" maxlength="5000" rows="3"></textarea></label>
+            <button class="button button-primary form-submit" type="submit">Publish assignment</button>
+          </form>
+          <div class="notice-list" data-teacher-assignments><p class="empty-state">No assignments have been published.</p></div>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Examination marks</h2><p>Publish marks only for students in classes assigned to your account.</p></div></div>
+          <form class="form-grid" data-marks-form>
+            <label>Class<select name="classId" required data-results-class><option value="">Select an assigned class</option></select></label>
+            <label>Student<select name="studentId" required data-result-student><option value="">Choose a class first</option></select></label>
+            <label>Exam<input name="examName" required minlength="2" maxlength="100"></label>
+            <label>Subject<input name="subject" required minlength="2" maxlength="100"></label>
+            <label>Marks earned<input name="score" type="number" min="0" max="100000" step="0.01" required></label>
+            <label>Maximum marks<input name="maximumScore" type="number" min="0.01" max="100000" step="0.01" required></label>
+            <button class="button button-primary form-submit" type="submit">Publish marks</button>
+          </form>
+          <div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>EXAM</th><th>SUBJECT</th><th>MARKS</th><th>PERCENTAGE</th></tr></thead><tbody data-teacher-results><tr><td colspan="5" class="empty-state">No examination marks have been published.</td></tr></tbody></table></div>
+        </section>
+        <section id="teacher-notices" class="panel"><div class="panel-heading"><div><h2>College notices</h2><p>Announcements shared with teachers.</p></div></div><div class="notice-list" data-notices></div></section>
+      </div>
+    </main>
+  </div>
+  <script src="teacher-portal.js" defer></script>
+</body>
+</html>

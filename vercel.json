@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "echo Static deployment does not require npm dependencies",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
